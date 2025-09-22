@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>pf-authentication-service-dto</module>
+        <module>dto</module>
         <module>application</module>
     </modules>
 
