@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: pf-authentication-service
+
+info:
+  app:
+    artifact: "@project.artifactId@"
+    name: "@project.name@"
+    version: "@project.version@"
+
+logging:
+  pattern:
+    # Logging pattern containing traceId and spanId; no longer provided through Sleuth by default
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
