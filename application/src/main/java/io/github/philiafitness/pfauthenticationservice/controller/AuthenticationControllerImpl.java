@@ -1,12 +1,12 @@
 package io.github.philiafitness.pfauthenticationservice.controller;
 
-import com.newhorizon.nhauthenticationsupportservice.service.KeycloakLoginGatewayWebClient;
-import com.newhorizon.nhauthenticationsupportservice.service.KeycloakLogoutGatewayWebClient;
-import com.newhorizon.nhauthenticationsupportservice.service.KeycloakRefreshGatewayWebClient;
-import com.newhorizon.nhauthenticationsupportservicedto.monolith.BaseResponse;
-import com.newhorizon.nhauthenticationsupportservicedto.request.LoginRequestBean;
-import com.newhorizon.nhauthenticationsupportservicedto.request.LogoutRequestBean;
-import com.newhorizon.nhauthenticationsupportservicedto.request.RefreshRequestBean;
+import io.github.philiafitness.pfauthenticationservice.service.KeycloakLoginGatewayWebClient;
+import io.github.philiafitness.pfauthenticationservice.service.KeycloakLogoutGatewayWebClient;
+import io.github.philiafitness.pfauthenticationservice.service.KeycloakRefreshGatewayWebClient;
+import io.github.philiafitness.pfauthenticationservicedto.request.LoginRequestBean;
+import io.github.philiafitness.pfauthenticationservicedto.request.LogoutRequestBean;
+import io.github.philiafitness.pfauthenticationservicedto.request.RefreshRequestBean;
+import io.github.philiafitness.pfstarter.pfwebstarter.bean.response.BaseResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,14 +1,13 @@
 package io.github.philiafitness.pfauthenticationservice.mapper;
 
-import com.newhorizon.nhauthenticationsupportservice.dto.response.keycloak.KeycloakBaseResponse;
-import com.newhorizon.nhauthenticationsupportservice.dto.response.keycloak.KeycloakLoginResponse;
-import com.newhorizon.nhauthenticationsupportservice.dto.response.keycloak.KeycloakRefreshResponse;
-import com.newhorizon.nhauthenticationsupportservice.enums.KeycloakErrorEnum;
-import com.newhorizon.nhauthenticationsupportservicedto.monolith.BaseResponse;
-import com.newhorizon.nhauthenticationsupportservicedto.monolith.EmptyResponseBean;
-import com.newhorizon.nhauthenticationsupportservicedto.monolith.ResponseCodesEnum;
-import com.newhorizon.nhauthenticationsupportservicedto.response.LoginResponseBean;
-import com.newhorizon.nhauthenticationsupportservicedto.response.RefreshResponseBean;
+import io.github.philiafitness.pfauthenticationservice.enums.KeycloakErrorEnum;
+import io.github.philiafitness.pfauthenticationservice.keycloak.KeycloakBaseResponse;
+import io.github.philiafitness.pfauthenticationservice.keycloak.KeycloakLoginResponse;
+import io.github.philiafitness.pfauthenticationservice.keycloak.KeycloakRefreshResponse;
+import io.github.philiafitness.pfauthenticationservicedto.response.LoginResponseBean;
+import io.github.philiafitness.pfauthenticationservicedto.response.RefreshResponseBean;
+import io.github.philiafitness.pfstarter.pfwebstarter.bean.response.BaseResponse;
+import io.github.philiafitness.pfstarter.pfwebstarter.enums.ResponseCodesEnum;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
@@ -30,7 +29,7 @@ public interface KeycloakResponseMapper {
     @Mapping(target = "responseCode", source = "keycloakResponse", qualifiedByName = "setCode")
     @Mapping(target = "responseMessage", source = "keycloakResponse", qualifiedByName = "setMessage")
     @Mapping(target = "status", source = "keycloakResponse", qualifiedByName = "setStatus")
-    EmptyResponseBean convertKeycloakLogoutToServiceResponse(KeycloakBaseResponse keycloakResponse);
+    BaseResponse convertKeycloakLogoutToServiceResponse(KeycloakBaseResponse keycloakResponse);
 
     @Named("setCode")
     default Integer setCode(KeycloakBaseResponse keycloakBaseResponse) {
@@ -57,7 +56,7 @@ public interface KeycloakResponseMapper {
             case GENERIC_ERROR -> ResponseCodesEnum.GENERIC_ERROR;
             case INVALID_GRANT -> ResponseCodesEnum.BAD_CREDENTIALS;
             case INVALID_CLIENT -> ResponseCodesEnum.INVALID_CLIENT_CONFIGURATION;
-            case UNAUTHORIZED_CLIENT -> ResponseCodesEnum.UNHAUTORIZED_CLIENT;
+            case UNAUTHORIZED_CLIENT -> ResponseCodesEnum.UNAUTHORIZED_CLIENT;
             case INVALID_REQUEST -> ResponseCodesEnum.BAD_PARAMETER;
             case UNSUPPORTED_GRANT_TYPE -> ResponseCodesEnum.BAD_GRANT_TYPE;
         };

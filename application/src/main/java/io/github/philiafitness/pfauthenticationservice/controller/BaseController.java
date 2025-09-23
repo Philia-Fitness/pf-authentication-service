@@ -1,7 +1,7 @@
 package io.github.philiafitness.pfauthenticationservice.controller;
 
-import com.newhorizon.nhauthenticationsupportservicedto.monolith.BaseResponse;
-import com.newhorizon.nhauthenticationsupportservicedto.monolith.ResponseCodesEnum;
+import io.github.philiafitness.pfstarter.pfwebstarter.bean.response.BaseResponse;
+import io.github.philiafitness.pfstarter.pfwebstarter.enums.ResponseCodesEnum;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

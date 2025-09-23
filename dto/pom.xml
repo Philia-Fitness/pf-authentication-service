@@ -36,6 +36,14 @@
             <artifactId>jackson-annotations</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Internal -->
+        <dependency>
+            <groupId>io.github.philia-fitness.pf-starter</groupId>
+            <artifactId>pf-web-starter</artifactId>
+            <scope>provided</scope>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
