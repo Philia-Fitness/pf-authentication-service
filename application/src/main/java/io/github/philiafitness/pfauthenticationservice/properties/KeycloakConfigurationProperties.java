@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Data
-@ConfigurationProperties(prefix = "com.newhorizon.nh-authentication-support-service.keycloak")
+@ConfigurationProperties(prefix = "io.github.philia-fitness.pf-authentication-service.keycloak")
 public class KeycloakConfigurationProperties {
     private Client client = new Client();
     private Endpoints endpoints = new Endpoints();

@@ -1,6 +1,9 @@
 spring:
   application:
     name: pf-authentication-service
+server:
+  servlet:
+    context-path: /${info.app.artifact}
 
 info:
   app:
@@ -12,3 +15,20 @@ logging:
   pattern:
     # Logging pattern containing traceId and spanId; no longer provided through Sleuth by default
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
+io:
+  github:
+    philia-fitness:
+      pf-authentication-service:
+        keycloak:
+          client:
+            id: ${KEYCLOAK_CLIENT_ID}
+            secret: ${KEYCLOAK_CLIENT_SECRET}
+          endpoints:
+            authentication: ${io.github.philia-fitness.pf-authentication-service.keycloak.server.base-url}/realms/${io.github.philia-fitness.pf-authentication-service.keycloak.realm.id}/protocol/openid-connect/token
+            refresh-token: ${io.github.philia-fitness.pf-authentication-service.keycloak.server.base-url}/realms/${io.github.philia-fitness.pf-authentication-service.keycloak.realm.id}/protocol/openid-connect/token
+            logout: ${io.github.philia-fitness.pf-authentication-service.keycloak.server.base-url}/realms/${io.github.philia-fitness.pf-authentication-service.keycloak.realm.id}/protocol/openid-connect/logout
+          realm:
+            id: ${KEYCLOAK_REALM}
+          server:
+            base-url: ${KEYCLOAK_HOST:http://localhost:9002}
