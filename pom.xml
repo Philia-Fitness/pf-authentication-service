@@ -22,23 +22,23 @@
     </properties>
 
     <scm>
-        <url>https://github.com/Philia-Fitness/${project.artifactId}</url>
-        <connection>git://github.com/Philia-Fitness/${project.artifactId}.git</connection>
-        <developerConnection>git@github.com:Philia-Fitness/${project.artifactId}.git</developerConnection>
+        <url>https://github.com/Philia-Fitness/pf-authentication-service</url>
+        <connection>git://github.com/Philia-Fitness/pf-authentication-service.git</connection>
+        <developerConnection>git@github.com:Philia-Fitness/pf-authentication-service.git</developerConnection>
     </scm>
     <issueManagement>
         <system>Github Issues</system>
-        <url>https://github.com/Philia-Fitness/${project.artifactId}/issues</url>
+        <url>https://github.com/Philia-Fitness/pf-authentication-service/issues</url>
     </issueManagement>
     <ciManagement>
         <system>Github Actions</system>
-        <url>https://github.com/Philia-Fitness/${project.artifactId}/actions</url>
+        <url>https://github.com/Philia-Fitness/pf-authentication-service/actions</url>
     </ciManagement>
     <distributionManagement>
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/Philia-Fitness/${project.artifactId}</url>
+            <url>https://maven.pkg.github.com/Philia-Fitness/pf-authentication-service</url>
         </repository>
     </distributionManagement>
     <licenses>
