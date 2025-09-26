@@ -19,6 +19,9 @@
 
     <properties>
         <maven-deploy.skip>true</maven-deploy.skip>
+
+        <!-- Overrides -->
+        <pf-web-starter.version>0.0.1-SNAPSHOT</pf-web-starter.version>
     </properties>
 
     <scm>
@@ -56,5 +59,15 @@
             <url>https://maven.pkg.github.com/Philia-Fitness/*</url>
         </repository>
     </repositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.philia-fitness</groupId>
+                <artifactId>pf-authentication-service-dto</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

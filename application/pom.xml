@@ -75,14 +75,12 @@
         <dependency>
             <groupId>io.github.philia-fitness.pf-starter</groupId>
             <artifactId>pf-web-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <!-- DTO -->
         <dependency>
             <groupId>io.github.philia-fitness</groupId>
             <artifactId>pf-authentication-service-dto</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <!-- Testing -->
